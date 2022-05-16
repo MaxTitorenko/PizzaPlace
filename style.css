@@ -320,6 +320,16 @@ footer{
     z-index: 2;
 }
 
+.mobile-modal{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
 .email-modal{
     z-index: 3;
 }
@@ -976,7 +986,7 @@ footer{
 }
 
 @media (max-height: 900px){
-    .email-window,
+    .email-window, .order-window,
     .constructor-window, .sort-window{
         max-height: 90vh;
         overflow-y: auto;
