@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="https://s3.amazonaws.com/iconbros/icons/icon_pngs/000/010/692/original/pizza.png?1632676371" />
+    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Nunito:wght@300;400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>PizzaPlace Menu</title>
+</head>
+<body>
+
+    <div class="email-modal hidden" id="emailModal">
+        <div class="email-window container">
+            <div class="modal-close" id="closeModal">
+                <div class="modal-close-line-1"></div>
+                <div class="modal-close-line-2"></div>
+            </div>
+
+            <div class="email-content">
+                <h1 class="email-header">Join Us Today</h1>
+                <div class="email-line"></div>
+                <p class="email-text">Be The First One To Know About New Dishes,
+                    Events And More About Our Restaurant</p>
+            </div>
+
+            <form class="modal-input-container">
+                <input type="text" placeholder="Your Email..." class="modal-input" autocomplete="off">
+                <button class="modal-button">Join</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="modal hidden" id="pizzaModal">
+        <div class="constructor-window container">
+            <div class="constructor-topbar">
+                <h2>Pizza Constructor</h2>
+                <div class="modal-close" id="pizzaClose">
+                    <div class="modal-close-line-1"></div>
+                    <div class="modal-close-line-2"></div>
+                </div>
+            </div>
+
+            <div class="constructor-layers">
+                <img src="/img/PizzaLayers/dough.png" class="constructor-layer">
+                <img src="/img/PizzaLayers/tomatosause.png" class="constructor-layer hidden" id="tomatosauseImage">
+                <img src="/img/PizzaLayers/standartsause.png" class="constructor-layer  hidden" id="standartsauseImage">
+                <img src="/img/PizzaLayers/bacon.png" class="constructor-layer  hidden" id="baconImage">
+                <img src="/img/PizzaLayers/bellpepper.png" class="constructor-layer  hidden" id="bellpepperImage">
+                <img src="/img/PizzaLayers/corn.png" class="constructor-layer  hidden" id="cornImage">
+                <img src="/img/PizzaLayers/ham.png" class="constructor-layer  hidden" id="hamImage">
+                <img src="/img/PizzaLayers/mushrooms.png" class="constructor-layer  hidden" id="mushroomsImage">
+                <img src="/img/PizzaLayers/olives.png" class="constructor-layer  hidden" id="olivesImage">
+                <img src="/img/PizzaLayers/onions.png" class="constructor-layer  hidden" id="onionsImage">
+                <img src="/img/PizzaLayers/pineapples.png" class="constructor-layer  hidden" id="pineapplesImage">
+                <img src="/img/PizzaLayers/sausages.png" class="constructor-layer  hidden" id="sausagesImage">
+                <img src="/img/PizzaLayers/shrimps.png" class="constructor-layer  hidden" id="shrimpsImage">
+                <img src="/img/PizzaLayers/spicypepper.png" class="constructor-layer  hidden" id="spicypepperImage">
+                <img src="/img/PizzaLayers/tomatoes.png" class="constructor-layer  hidden" id="tomatoesImage">
+            </div>
+
+            <div class="constructor-switches">
+                <div class="constructor-line"></div>
+                <h2 class="constructor-section-name">Sause:</h2>
+                <form class="constructor-sause">
+
+                    <div>
+                        <input type="radio" name="sause" id="tomatoSause" class="constructor-radio">
+                        <label for="tomatoSause">Tomato Sause</label>
+                    </div>   
+
+                    <div>
+                        <input type="radio" name="sause" id="standartSause" class="constructor-radio">
+                        <label for="standartSause">Standart Sause</label>
+                    </div>
+
+                </form>
+
+                <h2 class="constructor-section-name">Ingredients:</h2>
+                <form class="constructor-ingredients">
+                    <div>
+                        <input type="checkbox" name="ingredient" id="bacon" class="constructor-checkbox">
+                        <label for="bacon">Bacon <span class="constructor-add-price">$1</span></label>
+                    </div>
+                    
+                    <div>
+                        <input type="checkbox" name="ingredient" id="bellPepper" class="constructor-checkbox">
+                        <label for="bellPepper">Bell Pepper <span class="constructor-add-price">$1</span></label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="ingredient" id="corn" class="constructor-checkbox">
+                        <label for="corn">Corn <span class="constructor-add-price">$1</span></label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="ingredient" id="ham" class="constructor-checkbox">
+                        <label for="ham">Ham <span class="constructor-add-price">$1</span></label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="ingredient" id="mushrooms" class="constructor-checkbox">
+                        <label for="mushrooms">Mushrooms <span class="constructor-add-price">$1</span></label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="ingredient" id="olives" class="constructor-checkbox">
+                        <label for="olives">Olives <span class="constructor-add-price">$1</span></label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="ingredient" id="onions" class="constructor-checkbox">
+                        <label for="onions">Onions <span class="constructor-add-price">$1</span></label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="ingredient" id="pineapples" class="constructor-checkbox">
+                        <label for="pineapples">Pineapples <span class="constructor-add-price">$1</span></label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="ingredient" id="sausages" class="constructor-checkbox">
+                        <label for="sausages">Sausages <span class="constructor-add-price">$1</span></label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="ingredient" id="shrimps" class="constructor-checkbox">
+                        <label for="shrimps">Shrimps <span class="constructor-add-price">$1</span></label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="ingredient" id="spicyPepper" class="constructor-checkbox">
+                        <label for="spicyPepper">Spicy Pepper <span class="constructor-add-price">$1</span></label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="ingredient" id="tomatoes" class="constructor-checkbox">
+                        <label for="tomatoes">Tomatoes <span class="constructor-add-price">$1</span></label>
+                    </div>
+
+                </form>
+                <button class="constructor-finish" id="constructorFinish">Finish</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal hidden" id="mobileMenu">
+        <div class="mobile-window container">
+            <div class="modal-close" id="mobileMenuClose">
+                <div class="modal-close-line-1"></div>
+                <div class="modal-close-line-2"></div>
+            </div>
+                <a href="menu.html" class="mobile-item">Menu</a>
+                <a href="#" class="mobile-item" id="email">Email Signup</a>
+                <a href="https://www.facebook.com" target="_blank" class="mobile-item">Our Facebook</a>
+                <a href="https://www.instagram.com" target="_blank" class="mobile-item">Our Instagram</a>
+                <a href="https://www.gmail.com" target="_blank" class="mobile-item">Our Gmail</a>
+        </div>
+    </div>
+
+    <div class="modal hidden" id="sortModal">
+        <div class="sort-window container">
+            <div class="modal-close" id="closeSort">
+                <div class="modal-close-line-1"></div>
+                <div class="modal-close-line-2"></div>
+            </div>
+
+            <div class="sort-buttons">
+                <button class="sort-button" id="sortVegetarian">Vegetarian</button>
+                <button class="sort-button" id="sortMeat">Include Meat</button>
+                <button class="sort-button" id="sortSea">Include Sea Products</button>
+                <button class="sort-button" id="sortTomato">Tomato Sause Base</button>
+                <button class="sort-button" id="sortStandart">Standart Sause Base</button>
+                <button class="sort-button" id="sortReset">Reset Sorting</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal hidden" id="orderModal">
+        <div class="order-window container">
+            <div class="modal-close" id="closeOrder">
+                <div class="modal-close-line-1"></div>
+                <div class="modal-close-line-2"></div>
+            </div>
+
+            <div class="order-content">
+
+                <div class="order-item hidden" id="orderOlive">
+                    <div class="order-name">
+                        <img src="img/olivepizza.png" class="order-img">
+                        <h2>Olive Pizza</h2>
+                    </div>
+
+                    <div>
+                        <h2>Amount: <span id="oliveAmount">0</span></h2>
+                    </div>
+
+                    <div>
+                        <h2>Price: $<span id="oliveEndPrice">0</span></h2>
+                    </div>
+                </div>
+
+                <div class="order-item hidden" id="orderHawaiian">
+                    <div class="order-name">
+                        <img src="img/hawaian.png" class="order-img">
+                        <h2>Hawaiian Pizza</h2>
+                    </div>
+
+                    <div>
+                        <h2>Amount: <span id="hawaiianAmount">0</span></h2>
+                    </div>
+
+                    <div>
+                        <h2>Price: $<span id="hawaiianEndPrice">0</span></h2>
+                    </div>
+                </div>
+
+                <div class="order-item hidden" id="orderSpicy">
+                    <div class="order-name">
+                        <img src="img/spicymeat.png" class="order-img">
+                        <h2>Spicy Meat Pizza</h2>
+                    </div>
+
+                    <div>
+                        <h2>Amount: <span id="spicyAmount">0</span></h2>
+                    </div>
+
+                    <div>
+                        <h2>Price: $<span id="spicyEndPrice">0</span></h2>
+                    </div>
+                </div>
+
+                <div class="order-item hidden" id="orderVegetarian">
+                    <div class="order-name">
+                        <img src="img/olivevegetarian.png" class="order-img">
+                        <h2>Olive Vegetarian Pizza</h2>
+                    </div>
+
+                    <div>
+                        <h2>Amount: <span id="vegetarianAmount">0</span></h2>
+                    </div>
+
+                    <div>
+                        <h2>Price: $<span id="vegetarianEndPrice">0</span></h2>
+                    </div>
+                </div>
+
+                <div class="order-item hidden" id="orderVegetable">
+                    <div class="order-name">
+                        <img src="img/vegetablemix.png" class="order-img">
+                        <h2>Vegetable Mix Pizza</h2>
+                    </div>
+
+                    <div>
+                        <h2>Amount: <span id="vegetableAmount">0</span></h2>
+                    </div>
+
+                    <div>
+                        <h2>Price: $<span id="vegetableEndPrice">0</span></h2>
+                    </div>
+                </div>
+
+                <div class="order-item hidden" id="orderMushroom">
+                    <div class="order-name">
+                        <img src="img/mushroom.png" class="order-img">
+                        <h2>Mushroom Pizza</h2>
+                    </div>
+
+                    <div>
+                        <h2>Amount: <span id="mushroomAmount">0</span></h2>
+                    </div>
+
+                    <div>
+                        <h2>Price: $<span id="mushroomEndPrice">0</span></h2>
+                    </div>
+                </div>
+
+                <div class="order-item hidden" id="orderSmeat">
+                    <div class="order-name">
+                        <img src="img/supermeat.png" class="order-img">
+                        <h2>Super Meat Pizza</h2>
+                    </div>
+
+                    <div>
+                        <h2>Amount: <span id="smeatAmount">0</span></h2>
+                    </div>
+
+                    <div>
+                        <h2>Price: $<span id="smeatEndPrice">0</span></h2>
+                    </div>
+                </div>
+
+                <div class="order-item hidden" id="orderSea">
+                    <div class="order-name">
+                        <img src="img/seaprod.png" class="order-img">
+                        <h2>Seafood Pizza</h2>
+                    </div>
+
+                    <div>
+                        <h2>Amount: <span id="seaAmount">0</span></h2>
+                    </div>
+
+                    <div>
+                        <h2>Price: $<span id="seaEndPrice">0</span></h2>
+                    </div>
+                </div>
+
+                <div class="order-item hidden" id="orderBacon">
+                    <div class="order-name">
+                        <img src="img/bacon.png" class="order-img">
+                        <h2>Bacon Pizza</h2>
+                    </div>
+
+                    <div>
+                        <h2>Amount: <span id="baconAmount">0</span></h2>
+                    </div>
+
+                    <div>
+                        <h2>Price: $<span id="baconEndPrice">0</span></h2>
+                    </div>
+                </div>
+
+                <div class="order-item hidden" id="orderVilage">
+                    <div class="order-name">
+                        <img src="img/vilage.png" class="order-img">
+                        <h2>Vilage Pizza</h2>
+                    </div>
+
+                    <div>
+                        <h2>Amount: <span id="vilageAmount">0</span></h2>
+                    </div>
+
+                    <div>
+                        <h2>Price: $<span id="vilageEndPrice">0</span></h2>
+                    </div>
+                </div>
+
+                <div class="order-item hidden" id="orderConstructed">
+                    <div class="order-name">
+                        <img src="img/PizzaLayers/dough.png" class="order-img">
+                        <h2>Your Own Pizza</h2>
+                    </div>
+
+                    <div>
+                        <h2>Amount: <span id="constructedAmount">0</span></h2>
+                    </div>
+
+                    <div>
+                        <h2>Price: $<span id="constructedEndPrice">0</span></h2>
+                    </div>
+                </div>
+
+            </div>
+            <h1 class="order-final-price">Final Price: <span class="final-price-accent">$<span class="final-price-accent2" id="finalPrice">0</span></span></h1>
+
+            <form class="order-form">
+                <h2>Your Name:</h2>
+                <input type="text" class="order-input" autocomplete="off" required>
+                <h2>Your Adress:</h2>
+                <input type="text" class="order-input" autocomplete="off" required>
+                <h2>Your Phone Number:</h2>
+                <input type="text" class="order-input" autocomplete="off" required>
+                <h2>Delivery:</h2>
+                
+                <div class="order-radio">
+                    <div>
+                        <input type="radio" name="delivery" id="uber" required>
+                        <label for="uber">Uber Eats</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="delivery" id="glovo" required>
+                        <label for="glovo">Glovo</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="delivery" id="doordash" required>
+                        <label for="doordash">DoorDash</label>
+                    </div>
+                </div>
+
+                <button class="menu-order finish-order">Finish Order</button>
+            </form>
+        </div>
+    </div>
+
+    <header class="container header">
+        <nav class="head">
+            <a href="index.html"><h1 class="logo">PizzaPlace</h1><a>
+            <div class="secondary-nav">
+                <a href="#" class="sec-nav-item  menu-nav-item" id="email2"><h2>Email Signup</h2></a>
+                <div class="dropdown sec-nav-item">
+                    <a href="#" class="sec-nav-item menu-nav-item"><h2>Socials</h2></a>
+                    <div class="dropdown-content">
+                        <a href="https://www.facebook.com" target="_blank" class="dropdown-items menu-dropdown-items">Facebook</a>
+                        <a href="https://www.instagram.com" target="_blank" class="dropdown-items  menu-dropdown-items">Instagram</a>
+                        <a href="https://www.gmail.com" target="_blank" class="dropdown-items  menu-dropdown-items">Gmail</a>
+                    </div>
+                </div>
+                <a href="menu.html" class="sec-nav-item  menu-nav-item"><h2>Menu</h2></a>
+            </div>
+
+            <div class="head-mobile-menu" id="mobileMenuOpen">
+                <div class="head-mobile-line"></div>
+                <div class="head-mobile-line"></div>
+                <div class="head-mobile-line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container menu-container">
+        <div class="menu">
+
+            <form class="menu-search-sort container">
+                <input type="text" class="menu-search" placeholder="Search by name..." id="search" autocomplete="off">
+                <button class="menu-sort" id="openSort">Sort</button>
+            </form>
+
+            <div class="menu-items">
+
+                <div class="menu-item" id="olivePizza">
+                    <img src="/img/olivepizza.png" class="menu-item-img">
+                    <div class="menu-item-info">
+                        <h2 align="center" id = "oliveName">Olive Mix Pizza</h2>
+                        <div class="menu-description">
+                            <p class="menu-description-text">Standart Sause, Olives, Tomatoes, Sausages, Mozzarella</p>
+                            <p class="menu-description-price">$<span id="olivePrice">12.75</span></p>
+                        </div>
+                        <form class="menu-item-quantity">
+                            <button class="quantity-minus quantity" id="oliveMinus">-</button>
+                            <input type="text" class="quantity-input" value="0" id="oliveQuantity">
+                            <button class="quantity-plus quantity" id="olivePlus">+</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="menu-item" id="hawaiianPizza">
+                    <img src="/img/hawaian.png" class="menu-item-img">
+                    <div class="menu-item-info">
+                        <h2 align="center" id="hawaiianName">Hawaiian Pizza</h2>
+                        <div class="menu-description">
+                            <p class="menu-description-text">Tomato Sause, Ham, Pineapples, Corn, Mozzarella</p>
+                            <p class="menu-description-price" id="">$<span id="hawaiianPrice">11.50<span></p>
+                        </div>
+                        <form class="menu-item-quantity">
+                            <button class="quantity-minus quantity" id="hawaiianMinus">-</button>
+                            <input type="text" class="quantity-input" value="0" id="hawaiianQuantity">
+                            <button class="quantity-plus quantity" id="hawaiianPlus">+</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="menu-item" id="spicymeatPizza">
+                    <img src="/img/spicymeat.png" class="menu-item-img">
+                    <div class="menu-item-info">
+                        <h2 align="center" id="spicyName">Spicy Meat Pizza</h2>
+                        <div class="menu-description">
+                            <p class="menu-description-text">Tomato Sause, Ham, Sausages, Spicy Pepper, Mozzarella</p>
+                            <p class="menu-description-price">$<span id="spicyPrice">13.00</span></p>
+                        </div>
+                        <form class="menu-item-quantity">
+                            <button class="quantity-minus quantity" id="spicyMinus">-</button>
+                            <input type="text" class="quantity-input" value="0" id="spicyQuantity">
+                            <button class="quantity-plus quantity" id="spicyPlus">+</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="menu-item" id="vegetarianPizza">
+                    <img src="/img/olivevegetarian.png" class="menu-item-img">
+                    <div class="menu-item-info">
+                        <h2 align="center" id="vegetarianName">Olive Vegetarian Pizza</h2>
+                        <div class="menu-description">
+                            <p class="menu-description-text">Standart Sause, Olives, Tomatoes, Bell Pepper, Mozzarella</p>
+                            <p class="menu-description-price">$<span id="vegetarianPrice">11.00</span></p>
+                        </div>
+                        <form class="menu-item-quantity">
+                            <button class="quantity-minus quantity" id="vegetarianMinus">-</button>
+                            <input type="text" class="quantity-input" value="0" id="vegetarianQuantity">
+                            <button class="quantity-plus quantity" id="vegetarianPlus">+</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="menu-item" id="vegetablePizza">
+                    <img src="/img/vegetablemix.png" class="menu-item-img">
+                    <div class="menu-item-info">
+                        <h2 align="center" id="vegetableName">Vegetable Mix Pizza</h2>
+                        <div class="menu-description">
+                            <p class="menu-description-text">Standart Sause, Bell Pepper, Tomatoes, Onions, Corn, Mozzarella</p>
+                            <p class="menu-description-price">$<span id="vegetablePrice">10.75</span></p>
+                        </div>
+                        <form class="menu-item-quantity">
+                            <button class="quantity-minus quantity" id="vegetableMinus">-</button>
+                            <input type="text" class="quantity-input" value="0" id="vegetableQuantity">
+                            <button class="quantity-plus quantity" id="vegetablePlus">+</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="menu-item" id="mushroomPizza">
+                    <img src="/img/mushroom.png" class="menu-item-img">
+                    <div class="menu-item-info">
+                        <h2 align="center" id="mushroomName">Mushroom Pizza</h2>
+                        <div class="menu-description">
+                            <p class="menu-description-text">Tomato Sause, Mushrooms, Ham, Spicy Pepper, Mozzarella</p>
+                            <p class="menu-description-price">$<span id="mushroomPrice">12.50</span></p>
+                        </div>
+                        <form class="menu-item-quantity">
+                            <button class="quantity-minus quantity" id="mushroomMinus">-</button>
+                            <input type="text" class="quantity-input" value="0" id="mushroomQuantity">
+                            <button class="quantity-plus quantity" id="mushroomPlus">+</button>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div class="menu-item" id="smeatPizza">
+                    <img src="/img/supermeat.png" class="menu-item-img">
+                    <div class="menu-item-info">
+                        <h2 align="center" id="smeatName">Super Meat Pizza</h2>
+                        <div class="menu-description">
+                            <p class="menu-description-text">Standart Sause, Ham, Bacon, Sausages, Mozzarella</p>
+                            <p class="menu-description-price">$<span id="smeatPrice">14.00</span></p>
+                        </div>
+                        <form class="menu-item-quantity">
+                            <button class="quantity-minus quantity" id="smeatMinus">-</button>
+                            <input type="text" class="quantity-input" value="0" id="smeatQuantity">
+                            <button class="quantity-plus quantity" id="smeatPlus">+</button>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div class="menu-item" id="seaPizza">
+                    <img src="/img/seaprod.png" class="menu-item-img">
+                    <div class="menu-item-info">
+                        <h2 align="center" id="seaName">Seafood Pizza</h2>
+                        <div class="menu-description">
+                            <p class="menu-description-text">Standart Sause, Shrimps, Onions, Spicy Pepper, Mozzarella</p>
+                            <p class="menu-description-price">$<span id="seaPrice">13.00</span></p>
+                        </div>
+                        <form class="menu-item-quantity">
+                            <button class="quantity-minus quantity" id="seaMinus">-</button>
+                            <input type="text" class="quantity-input" value="0" id="seaQuantity">
+                            <button class="quantity-plus quantity" id="seaPlus">+</button>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div class="menu-item" id="baconPizza">
+                    <img src="/img/bacon.png" class="menu-item-img">
+                    <div class="menu-item-info">
+                        <h2 align="center" id="baconName">Bacon Pizza</h2>
+                        <div class="menu-description">
+                            <p class="menu-description-text">Tomato Sause, Bacon, Onions, Bell Pepper, Mozzarella</p>
+                            <p class="menu-description-price">$<span id="baconPrice">12.75</span></p>
+                        </div>
+                        <form class="menu-item-quantity">
+                            <button class="quantity-minus quantity" id="baconMinus">-</button>
+                            <input type="text" class="quantity-input" value="0" id="baconQuantity">
+                            <button class="quantity-plus quantity" id="baconPlus">+</button>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div class="menu-item" id="vilagePizza">
+                    <img src="/img/vilage.png" class="menu-item-img">
+                    <div class="menu-item-info">
+                        <h2 align="center" id="vilageName">Vilage Pizza</h2>
+                        <div class="menu-description">
+                            <p class="menu-description-text">Tomato Sause, Tomatoes, Sausages, Mushrooms, Mozzarella</p>
+                            <p class="menu-description-price">$<span id="vilagePrice">13.50</span></p>
+                        </div>
+                        <form class="menu-item-quantity">
+                            <button class="quantity-minus quantity" id="vilageMinus">-</button>
+                            <input type="text" class="quantity-input" value="0" id="vilageQuantity">
+                            <button class="quantity-plus quantity" id="vilagePlus">+</button>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div class="menu-item" id="constructedPizza">
+                    <div class="menu-layers">
+                        <img src="/img/PizzaLayers/dough.png" class="menu-layer menu-make" id="pizzaOpen">
+                        <img src="/img/PizzaLayers/tomatosause.png" class="menu-layer hidden" id="tomatosauseImage2">
+                        <img src="/img/PizzaLayers/standartsause.png" class="menu-layer  hidden" id="standartsauseImage2">
+                        <img src="/img/PizzaLayers/bacon.png" class="menu-layer  hidden" id="baconImage2">
+                        <img src="/img/PizzaLayers/bellpepper.png" class="menu-layer  hidden" id="bellpepperImage2">
+                        <img src="/img/PizzaLayers/corn.png" class="menu-layer  hidden" id="cornImage2">
+                        <img src="/img/PizzaLayers/ham.png" class="menu-layer  hidden" id="hamImage2">
+                        <img src="/img/PizzaLayers/mushrooms.png" class="menu-layer  hidden" id="mushroomsImage2">
+                        <img src="/img/PizzaLayers/olives.png" class="menu-layer  hidden" id="olivesImage2">
+                        <img src="/img/PizzaLayers/onions.png" class="menu-layer  hidden" id="onionsImage2">
+                        <img src="/img/PizzaLayers/pineapples.png" class="menu-layer  hidden" id="pineapplesImage2">
+                        <img src="/img/PizzaLayers/sausages.png" class="menu-layer  hidden" id="sausagesImage2">
+                        <img src="/img/PizzaLayers/shrimps.png" class="menu-layer  hidden" id="shrimpsImage2">
+                        <img src="/img/PizzaLayers/spicypepper.png" class="menu-layer  hidden" id="spicypepperImage2">
+                        <img src="/img/PizzaLayers/tomatoes.png" class="menu-layer  hidden" id="tomatoesImage2">
+                    </div>
+                    <div class="menu-item-info">
+                        <h2 align="center" id="constructedName">Your Own Pizza</h2>
+                        <div class="menu-description">
+                            <p class="menu-description-text" id="constructedDescription">Press On The Image <br/> To Make Your Own <br/> Pizza. Base Is 10$</p>
+                            <p class="menu-description-price">$<span id="constructedPrice">0</span></p>
+                        </div>
+                        <form class="menu-item-quantity">
+                            <button class="quantity-minus quantity" id="constructedMinus">-</button>
+                            <input type="text" class="quantity-input" value="0" id="constructedQuantity">
+                            <button class="quantity-plus quantity" id="constructedPlus">+</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-order-container">
+                <button class="menu-order" id="openOrder">Order</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer container">
+            <a href="#"><h1 class="footer-logo">PizzaPlace</h1></a>
+            <h2 class="footer-join">Join Our Socials</h2>
+            <div class="footer-icons-container">
+                <a href="https://www.facebook.com" target="_blank"><img src="/img/facebook.png" alt="" class="footer-icons"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="/img/instagram.png" alt="" class="footer-icons"></a>
+                <a href="https://www.gmail.com" target="_blank"><img src="/img/mail.png" alt="" class="footer-icons"></a>
+            </div>
+        </div>
+        <p class="footer-c">PizzaPlace All Rigths Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

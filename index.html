@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="https://s3.amazonaws.com/iconbros/icons/icon_pngs/000/010/692/original/pizza.png?1632676371" />
+    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Nunito:wght@300;400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>PizzaPlace</title>
+</head>
+<body>
+
+    <div class="email-modal hidden" id="emailModal">
+        <div class="email-window container">
+            <div class="modal-close" id="closeModal">
+                <div class="modal-close-line-1"></div>
+                <div class="modal-close-line-2"></div>
+            </div>
+
+            <div class="email-content">
+                <h1 class="email-header">Join Us Today</h1>
+                <div class="email-line"></div>
+                <p class="email-text">Be The First One To Know About New Dishes,
+                    Events And More About Our Restaurant</p>
+            </div>
+
+            <form class="modal-input-container">
+                <input type="text" placeholder="Your Email..." class="modal-input" autocomplete="off">
+                <button class="modal-button">Join</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal hidden" id="mobileMenu">
+        <div class="mobile-window container">
+            <div id="mobileMenuClose">
+                <div class="modal-close-line-1"></div>
+                <div class="modal-close-line-2"></div>
+            </div>
+                <a href="menu.html" class="mobile-item">Menu</a>
+                <a href="#" class="mobile-item" id="email">Email Signup</a>
+                <a href="https://www.facebook.com" target="_blank" class="mobile-item">Our Facebook</a>
+                <a href="https://www.instagram.com" target="_blank" class="mobile-item">Our Instagram</a>
+                <a href="https://www.gmail.com" target="_blank" class="mobile-item">Our Gmail</a>
+        </div>
+    </div>
+
+    <header class="container header">
+        <div class="circle"></div>
+        <nav class="head">
+            <a href="index.html"><h1 class="logo">PizzaPlace</h1><a>
+            <div class="secondary-nav">
+                <a href="#" class="sec-nav-item" id="email2"><h2>Email Signup</h2></a>
+                <div class="dropdown sec-nav-item">
+                    <a href="#" class="sec-nav-item"><h2>Socials</h2></a>
+                    <div class="dropdown-content">
+                        <a href="https://www.facebook.com" target="_blank" class="dropdown-items">Facebook</a>
+                        <a href="https://www.instagram.com" target="_blank" class="dropdown-items">Instagram</a>
+                        <a href="https://www.gmail.com" target="_blank" class="dropdown-items">Gmail</a>
+                    </div>
+                </div>
+                <a href="menu.html" class="sec-nav-item"><h2>Menu</h2></a>
+            </div>
+
+            <div class="head-mobile-menu" id="mobileMenuOpen">
+                <div class="head-mobile-line"></div>
+                <div class="head-mobile-line"></div>
+                <div class="head-mobile-line"></div>
+            </div>
+        </nav>
+
+        <div class="head-content">
+            <div class="head-container head-text-container">
+                <p class="head-price">$ 13.00</p>
+                <h2 class="head-pizza-name">Spicy Meat Pizza</h2>
+                <h3 class="head-description">Tomato Sause, Ham, Sausages, Spicy Pepper, and Mozzarella cheese
+                    combining in one delicious meal</h3>
+                <a class="head-button" href="menu.html">Order Now</a>
+            </div>
+
+            <div class="head-container">
+                <img src="/img/frontpizza.png" class="head-img">
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <div class="delivery-inf">
+            <h1 class="delivery-header">Delivery Companies We Work With</h1>
+
+                <div class="delivery-boxes">
+                    <div class="delivery-box">
+                        <img src="/img/uber.png" class="delivery-img">
+                        <p class="delivery-info">Uber eats offers free delivery </p>
+                        <p class="delivery-time"><span class="delivery-emph">Estimated time of delivery:</span>
+                                                                        <br>30 min - 1 hr within city region</p>
+                    </div>
+
+                    <div class="delivery-box">
+                        <img src="/img/glovo.png" class="delivery-img">
+                        <p class="delivery-info">Glovo offers free delivery </p>
+                        <p class="delivery-time"><span class="delivery-emph">Estimated time of delivery:</span>
+                                                                        <br>30 min - 1 hr within city region</p>
+                    </div>
+                    
+                    <div class="delivery-box">
+                        <img src="/img/doordash.png" class="delivery-img">
+                        <p class="delivery-info">Doordash offers free delivery </p>
+                        <p class="delivery-time"><span class="delivery-emph">Estimated time of delivery:</span>
+                                                                        <br>30 min - 1 hr within city region</p>
+                    </div>
+                </div>
+        </div>
+
+        <div class="about-inf">
+            <img src="/img/about.jpg" class="about-img">
+
+            <div class="about-info">
+                <h2 class="about-header">About Us</h2>
+                <p class="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Mauris erat enim, dignissim et arcu at, fermentum euismod orci. 
+                    Morbi non tristique nunc. Duis porta elit vel ultrices finibus. 
+                    Integer porttitor, nibh a ornare efficitur, urna felis imperdiet mi, 
+                    a rutrum risus nulla eget arcu. Suspendisse maximus fermentum tortor, 
+                    eget sollicitudin purus commodo at. Curabitur eros metus, condimentum 
+                    et lacinia eget, accumsan nec ipsum. Sed maximus justo lacus, 
+                    a pharetra lectus tempus ac.
+
+                    Integer sit amet nisl sollicitudin, ullamcorper nulla vel, varius felis. 
+                    Vestibulum maximus vitae turpis quis placerat. 
+                    Vestibulum ante ipsum primis in faucibus orci luctus 
+                    et ultrices posuere cubilia curae; Integer dictum 
+                    
+                    Phasellus malesuada leo nibh, eu dictum ex maximus id. 
+                    Vestibulum nunc nulla, imperdiet ut dignissim eu, volutpat vitae mauris. 
+                    Vestibulum in urna bibendum, lacinia felis id, tempus velit. 
+                    Maecenas hendrerit a mi in efficitur. 
+                    Sed varius nulla ac auctor blandit. 
+                    Aenean facilisis eros nibh, eget semper felis semper sodales. 
+                    Aliquam dictum maximus metus, at aliquet neque gravida quis. 
+                    Donec ac sem sed lacus fringilla congue vel a est. 
+                    Fusce elementum dui massa. Nam sit amet lorem vulputate, rutrum lacus sit amet, 
+                    blandit tortor. Vivamus accumsan bibendum libero, 
+                    at ultrices mi consectetur et. Integer euismod sit amet leo a tincidunt. 
+                    Integer dapibus massa ac nulla ultricies, eget gravida lectus molestie. 
+                    Fusce et est ligula.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer container">
+            <a href="#"><h1 class="footer-logo">PizzaPlace</h1></a>
+            <h2 class="footer-join">Join Our Socials</h2>
+            <div class="footer-icons-container">
+                <a href="https://www.facebook.com" target="_blank"><img src="/img/facebook.png" alt="" class="footer-icons"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="/img/instagram.png" alt="" class="footer-icons"></a>
+                <a href="https://www.gmail.com" target="_blank"><img src="/img/mail.png" alt="" class="footer-icons"></a>
+            </div>
+        </div>
+        <p class="footer-c">PizzaPlace All Rigths Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
