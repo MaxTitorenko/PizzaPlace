@@ -332,6 +332,8 @@ footer{
     background-color: #ffff;
     border-radius: 2em;
     font-family: 'Nunito', sans-serif;
+    max-height: 600px;
+    overflow-y: auto;
 }
 
 .email-content{
@@ -934,6 +936,15 @@ footer{
         margin-left: 0;
     }
 }
+
+@media (max-height: 900px){
+    .email-window,
+    .constructor-window, .sort-window{
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+}
+
 
 /* Scrollbar */
 
