@@ -556,12 +556,12 @@ constructorFinish.addEventListener("click", function(event){
 
     if(tomatosauseImage.classList.contains('hidden')){
     }else{
-        constructedDescription.textContent += " Tomato Sause,"
+        constructedDescription.textContent += " Tomato Sauce,"
     }
 
     if(standartsauseImage.classList.contains('hidden')){
     }else{
-        constructedDescription.textContent += " Standart Sause,"
+        constructedDescription.textContent += " Standart Sauce,"
     }
 
     if(baconImage.classList.contains('hidden')){
